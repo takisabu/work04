@@ -1,0 +1,49 @@
+@use '../global/' as global;
+
+
+.tab {
+
+}
+
+.tab__menu {
+  display: flex;
+  justify-content: center;
+}
+
+.tab__menu-item {
+  min-width: 68px;
+
+  & + & {
+    margin-left: 53px;
+  }
+}
+
+.tab__trigger {
+  transition: opacity .3s ease;
+
+  &.is-active {
+    border-bottom: 1px solid currentColor;
+  }
+
+  &:not(.is-active) {
+    cursor: pointer;
+
+    @include global.mq('pc') {
+      &:hover, &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.tab__content {
+
+}
+
+.tab__content-item {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

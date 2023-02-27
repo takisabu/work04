@@ -1,0 +1,8 @@
+@use '../global/' as global;
+
+
+.pc-only {
+  @include global.mq('tab') {
+    display: none;
+  }
+}

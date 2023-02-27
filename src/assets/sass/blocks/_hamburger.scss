@@ -1,0 +1,62 @@
+@use '../global/' as global;
+
+
+.hamburger {
+  position: absolute;
+  z-index: global.get-layer-index('hamburger');
+  top: 0;
+  right: 10px;
+  width: 20px;
+  height: 14px;
+  margin-top: calc((global.$layout-height-header-sp - 14px) / 2);
+  margin-bottom: calc((global.$layout-height-header-sp - 14px) / 2);
+  display: none;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: transform .3s ease;
+  }
+
+  &::before {
+    transform: translateY(-5px);
+    box-shadow: 0 6px #FFFFFF;
+  }
+
+  &::after {
+    transform: translateY(5px);
+  }
+
+  &.is-fixed {
+    position: fixed;
+
+    &::before {
+      background-color: #000000;
+      box-shadow: 0 6px #000000;
+    }
+
+    &::after {
+      background-color: #000000;
+    }
+  }
+
+  .is-drawer-active & {
+    &::before {
+      background-color: #000000;
+      box-shadow: none;
+      transform: translateY(1px) rotate(45deg);
+    }
+
+    &::after {
+      background-color: #000000;
+      transform: translateY(-1px) rotate(-45deg);
+    }
+  }
+
+  @include global.mq('sp') {
+    display: block;
+  }
+}

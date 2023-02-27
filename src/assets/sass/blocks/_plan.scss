@@ -1,0 +1,77 @@
+@use '../global/' as global;
+
+
+.plan {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include global.mq('tab') {
+    position: relative;
+  }
+}
+
+.plan__body {
+  margin-top: 28px;
+
+  @include global.mq('tab') {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+}
+
+.plan__ttl {
+  font-size: 20px;
+  line-height: calc(32 / 20);
+
+  .plan--2 & {
+    padding-right: 12px;
+
+    @include global.mq('tab') {
+      padding-right: 0;
+    }
+  }
+
+  @include global.mq('tab') {
+    text-align: center;
+  }
+}
+
+.plan__txt {
+  line-height: 2;
+  margin-top: 20px;
+
+  .plan--2 & {
+    padding-right: 58px;
+
+    @include global.mq('tab') {
+      padding-right: 0;
+    }
+  }
+
+  @include global.mq('tab') {
+    margin-top: 10px;
+  }
+}
+
+.plan__img {
+  width: 100%;
+  height: 209px;
+
+  @include global.mq('tab') {
+    height: 300px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

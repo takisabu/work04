@@ -1,0 +1,50 @@
+@use '../global/' as global;
+
+
+.form {
+
+}
+
+.form__controls {
+
+}
+
+.form__control {
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.form__input {
+  display: block;
+  border: 1px solid #E7E7E7;
+  background-color: #FFFFFF;
+  width: 100%;
+  color: inherit;
+  font-size: 14px;
+  padding-top: 6px;
+  padding-left: 10px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+
+  &.form__input--select {
+    color: #797878;
+  }
+
+  &::placeholder {
+    color: #797878;
+  }
+}
+
+.form__submit {
+  margin-top: 60px;
+  max-width: 200px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}

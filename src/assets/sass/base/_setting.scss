@@ -27,8 +27,17 @@ a {
   cursor: pointer;
 }
 
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  color: inherit;
+}
+
 [type='text'],
-[type='email'] {
+[type='email'],
+select {
   appearance: none;
   border: none;
   color: inherit;

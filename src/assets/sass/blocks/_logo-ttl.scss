@@ -1,0 +1,21 @@
+@use '../global/' as global;
+
+
+.logo-ttl {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.logo-ttl__txt {
+  font-size: 36px;
+
+  @include global.mq('sp') {
+    font-size: 28px;
+  }
+}
+
+.logo-ttl__img {
+  width: 40px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,117 @@
+@use '../global/' as global;
+
+
+.message {
+  background-image: url("../img/bg.jpg");
+  padding-top: 64px;
+  padding-bottom: 90px;
+}
+
+.message__inner {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+
+  @include global.mq('tab') {
+    width: auto;
+  }
+
+  @include global.mq('sp') {
+    writing-mode: horizontal-tb;
+    padding-left: 10%;
+  }
+}
+
+.message__ttl {
+  padding-right: min(110px, calc(110 / 1920 * 100vw));
+
+  @include global.mq('tab') {
+    padding-right: 40px;
+  }
+
+  @include global.mq('sp') {
+    padding-right: 0;
+  }
+}
+
+.message__ttl-line {
+  display: block;
+  font-size: 28px;
+  letter-spacing: .5em;
+
+  & + & {
+    margin-top: 3em;
+    margin-right: .5em;
+
+    @include global.mq('tab') {
+      margin-top: 1em;
+    }
+
+    @include global.mq('sp') {
+      margin-right: 0;
+      margin-top: 0.5em;
+    }
+  }
+
+  @include global.mq('sp') {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+}
+
+.message__body {
+  margin-top: 5.25em;
+  margin-right: 100px;
+
+  @include global.mq('tab') {
+    margin-right: 60px;
+  }
+
+  @include global.mq('sp') {
+    margin-top: 2em;
+    margin-right: 0;
+  }
+}
+
+.message__txt {
+  letter-spacing: .38em;
+  line-height: 2.4;
+
+  @include global.mq('tab') {
+    line-height: 2;
+  }
+
+  @include global.mq('sp') {
+    letter-spacing: normal;
+  }
+
+  & + & {
+    margin-right: 94px;
+
+    @include global.mq('tab') {
+      margin-right: 50px;
+    }
+
+    @include global.mq('sp') {
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  }
+}
+
+.message__sign {
+  font-size: 22px;
+  letter-spacing: .45em;
+  text-align: right;
+  margin-right: 100px;
+  margin-bottom: 20px;
+
+  @include global.mq('tab') {
+    margin-right: 80px;
+  }
+
+  @include global.mq('sp') {
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-bottom: 0;
+  }
+}

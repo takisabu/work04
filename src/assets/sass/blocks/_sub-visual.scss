@@ -1,0 +1,42 @@
+@use '../global/' as global;
+
+
+.sub-visual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: global.$layout-height-header-pc;
+
+  @include global.mq('sp') {
+    height: 300px;
+    margin-top: global.$layout-height-header-sp;
+  }
+
+  &.sub-visual--room {
+    background-image: url("../img/oheya-header.jpg");
+  }
+
+  &.sub-visual--dining {
+    background-image: url("../img/menu-header.jpg");
+  }
+
+  &.sub-visual--hotspring {
+    background-image: url("../img/onsen-header.jpg");
+  }
+}
+
+.sub-visual__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub-visual__ttl {
+  color: #FFFFFF;
+  font-size: 34px;
+  font-weight: global.$font-weight-bold;
+}

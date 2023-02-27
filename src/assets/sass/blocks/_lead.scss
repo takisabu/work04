@@ -1,0 +1,23 @@
+@use '../global/' as global;
+
+
+.lead {
+  margin-top: 85px;
+
+  @include global.mq('sp') {
+    margin-top: 60px;
+  }
+}
+
+.lead__inner {
+
+}
+
+.lead__txt {
+  text-align: center;
+  line-height: 2;
+
+  @include global.mq('sp') {
+    text-align: left;
+  }
+}

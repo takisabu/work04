@@ -1,0 +1,13 @@
+@use '../global/' as global;
+
+
+.features {
+  padding-top: 106px;
+  padding-bottom: 80px;
+}
+
+.features__item {
+  & + & {
+    margin-top: 122px;
+  }
+}

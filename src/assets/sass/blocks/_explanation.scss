@@ -1,0 +1,25 @@
+@use '../global/' as global;
+
+
+.explanation {
+  margin-top: 70px;
+  margin-bottom: 150px;
+
+  @include global.mq('sp') {
+    margin-bottom: 100px;
+  }
+}
+
+.explanation__inner {
+
+}
+
+.explanation__list {
+
+}
+
+.explanation__item {
+  & + & {
+    margin-top: 82px;
+  }
+}
