@@ -1,0 +1,126 @@
+@use '../global/' as global;
+
+
+.alternate {
+  display: flex;
+  flex-direction: row-reverse;
+
+  &.alternate--rev {
+    flex-direction: row;
+
+    @include global.mq('tab') {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @include global.mq('tab') {
+    flex-direction: column-reverse;
+  }
+}
+
+.alternate__body {
+  position: relative;
+  flex: 1 1 auto;
+  height: 380px;
+  margin-top: 60px;
+  margin-left: -160px;
+  padding-top: 50px;
+  padding-right: 60px;
+  padding-left: 240px;
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include global.mq('tab') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    flex: 1 0 auto;
+    height: auto;
+    width: 90%;
+    max-width: 700px;
+    margin-top: -30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+  }
+
+  @include global.mq('sp') {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .alternate--rev & {
+    margin-right: -160px;
+    margin-left: 0;
+    padding-right: 200px;
+    padding-left: 60px;
+
+    @include global.mq('tab') {
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    @include global.mq('sp') {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+}
+
+.alternate__ttl {
+  font-size: 24px;
+}
+
+.alternate__txt {
+  line-height: 2;
+  margin-top: 37px;
+
+  @include global.mq('tab') {
+    margin-top: 20px;
+  }
+}
+
+.alternate__attention-list {
+  margin-top: 38px;
+
+  @include global.mq('tab') {
+    margin-top: 20px;
+  }
+}
+
+.alternate__attention-item {
+  font-size: 14px;
+
+  &::before {
+    content: "＊";
+  }
+}
+
+.alternate__img {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 calc(525 / 1180 * 100%);
+  height: 300px;
+
+  @include global.mq('tab') {
+    flex: 1 0 auto;
+  }
+
+  @include global.mq('sp') {
+    height: 200px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

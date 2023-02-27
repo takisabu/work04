@@ -8,21 +8,21 @@ $color-main: #21A937;
 $color-bg-base: #FFFFFF;
 
 // ----- Text Color -----
-$color-txt-base: #444444;
+$color-txt-base: #000000;
 
 
 // ============================================================
 // Font
 // ============================================================
 // ----- Font Family -----
-$font-base: 'Noto Sans JP', sans-serif;
+$font-base: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
 
 // ----- Font Size -----
 $font-size-base: 16px;
 
 // ----- Font Weight -----
 $font-weight-base: 400;
-$font-weight-bold: 700;
+$font-weight-bold: 800;
 
 // ----- Font Line Height -----
 $line-height-base: 1.6;
@@ -38,7 +38,7 @@ $break-point-md: 768px;
 // Layout
 // ============================================================
 // ----- Container -----
-$layout-width-header: 1180px;
+$layout-width-header: 1880px;
 $layout-width-container: 1180px;
 $layout-width-footer: 1180px;
 
@@ -47,9 +47,21 @@ $layout-width-inner-pc: 1180px;
 $layout-width-inner-sp: 768px;
 
 // ----- Height -----
-$layout-height-header-pc: 130px;
-$layout-height-header-sp: 200px;
+$layout-height-header-pc: 80px;
+$layout-height-header-sp: 60px;
 
 // ----- Padding -----
-$layout-padding-side-pc: 40px;
+$layout-padding-side-pc: 20px;
 $layout-padding-side-sp: 16px;
+
+// ============================================================
+// Layer
+// ============================================================
+// ----- Layer -----
+$layer: (
+  modal: 400,
+  hamburger: 300,
+  drawer: 200,
+  header: 100,
+  default: 1,
+);

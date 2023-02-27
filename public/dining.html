@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>お料理 - 石井花壇 | 温海温泉旅館【公式サイト】</title>
+  <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。 伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
+
+  <!-- noindex -->
+  <meta name=“robots” content=“noindex”>
+
+  <!-- flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <!-- MyCss -->
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+</head>
+
+<body>
+  <header id="js-header" class="header is-fixed">
+    <div class="header__inner">
+      <div class="header__img">
+        <a href="./">
+          <img src="./assets/img/sub-header-logo.png" alt="石井花壇">
+        </a>
+      </div>
+      <nav class="header__nav g-nav">
+        <ul class="g-nav__list">
+          <li class="g-nav__item"><a class="g-nav__link" href="./rooms.html">お部屋</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="./dining.html">お料理</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="./hotspring.html">温泉</a></li>
+        </ul>
+        <div class="g-nav__btn">
+          <button type="button" class="btn btn--reservation js-modal-open"><span class="btn__inner">宿泊予約</span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <button type="button" id="js-hamburger" class="btn hamburger is-fixed" aria-controls="js-drawer" aria-expanded="false"
+    aria-label="メニューを開閉する">
+  </button>
+
+  <div id="js-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer__content">
+      <p class="drawer__ttl">メニュー</p>
+      <ul class="drawer__nav">
+        <li class="drawer__nav-item drawer__nav-item--room"><a class="drawer__nav-link" href="./rooms.html">お部屋</a></li>
+        <li class="drawer__nav-item drawer__nav-item--dining"><a class="drawer__nav-link" href="./dining.html">お料理</a></li>
+        <li class="drawer__nav-item drawer__nav-item--hotspring"><a class="drawer__nav-link" href="./hotspring.html">温泉</a></li>
+      </ul>
+      <div class="drawer__nav-btn">
+        <button type="button" class="btn btn--reservation btn--lg btn--round js-modal-open"><span class="btn__inner">宿泊予約</span></button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="sub-visual sub-visual--dining">
+      <div class="sub-visual__content">
+        <h1 class="sub-visual__ttl">お料理</h1>
+      </div>
+    </div>
+
+    <div class="breadcrumb">
+      <div class="breadcrumb__inner container">
+        <ul class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="./"><span itemprop="name">トップ</span></a>
+            <meta itemprop="position" content="1">
+          </li>
+          <li class="breadcrumb__item">お料理</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lead">
+      <div class="lead__inner container">
+        <p class="lead__txt">
+          地元温海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>
+          大将の技が光る「温海料理」<br>
+          四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
+        </p>
+      </div>
+    </div>
+
+    <div class="explanation">
+      <div class="explanation__inner container">
+        <div class="explanation__list">
+          <section class="explanation__item alternate" data-aos="fade-up" data-aos-duration="1000">
+            <div class="alternate__body">
+              <h2 class="alternate__ttl">地元食材にこだわった会席料理</h2>
+              <p class="alternate__txt">
+                みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br>
+                旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br>
+                四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
+              </p>
+            </div>
+            <figure class="alternate__img">
+              <img src="./assets/img/menu01.jpg" alt="">
+            </figure>
+          </section>
+          <section class="explanation__item alternate alternate--rev" data-aos="fade-up" data-aos-duration="1000">
+            <div class="alternate__body">
+              <h2 class="alternate__ttl">温海の漁港で目利きの品を</h2>
+              <p class="alternate__txt">
+                石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br class="pc-only">温海の魚市場でその日のうちに仕入れたものを使用しております。<br>
+                日本海の宝玉を十分にお楽しみください。
+              </p>
+            </div>
+            <figure class="alternate__img">
+              <img src="./assets/img/menu02.jpg" alt="">
+            </figure>
+          </section>
+          <section class="explanation__item alternate" data-aos="fade-up" data-aos-duration="1000">
+            <div class="alternate__body">
+              <h2 class="alternate__ttl">食材が一流、職人も一流</h2>
+              <p class="alternate__txt">
+                石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>
+                その時の最も旬な食材を、最高の調理でお届けします。<br>
+                また、お料理への細かいご要望にもお答えできますので、<br class="pc-only">
+                お気軽にお申し付けください。
+              </p>
+            </div>
+            <figure class="alternate__img">
+              <img src="./assets/img/menu03.jpg" alt="">
+            </figure>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__inner container">
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a class="footer__nav-link" href="./rooms.html">お部屋</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="./dining.html">お料理</a></li>
+          <li class="footer__nav-item"><a class="footer__nav-link" href="./hotspring.html">温泉</a></li>
+        </ul>
+        <div class="footer__logo">
+          <a href="./">
+            <img src="./assets/img/footer-logo.png" alt="石井花壇">
+          </a>
+        </div>
+        <div class="footer__info">
+          <div class="footer__info-row">
+            <p class="footer__info-item">〒000-0000</p>
+            <p class="footer__info-item">山形県鶴岡市xxxxxxxxxxx</p>
+          </div>
+          <div class="footer__info-row">
+            <p class="footer__info-item">TEL.000-0000-0000</p>
+            <p class="footer__info-item">FAX.00-0000-0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <div class="container">
+        <small class="footer__copy-txt">Copyright &copy; 石井花壇 All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <section id="js-modal-area" class="modal">
+    <div id="js-modal-bg" class="modal__bg"></div>
+    <div class="modal__inner">
+      <div class="modal__contents">
+        <div class="modal__head">
+          <h2 class="modal__ttl">宿泊予約</h2>
+        </div>
+        <div class="modal__body">
+          <form action="#" class="modal__form form">
+            <div class="form__controls">
+              <div class="form__control">
+                <label for="your-name" class="form__label">お名前</label>
+                <input type="text" class="form__input" name="your-name" id="your-name" placeholder="例：石井正悟" required>
+              </div>
+              <div class="form__control">
+                <label for="your-email" class="form__label">メールアドレス</label>
+                <input type="email" class="form__input" name="your-email" id="your-email"
+                  placeholder="例：Example@example.com" required>
+              </div>
+              <div class="form__control">
+                <label for="your-plan" class="form__label">ご希望プラン<br class="hidden-pc">（空いているプランのみ表示されます）</label>
+                <select class="form__input form__input--select js-select" name="your-plan" id="your-plan" required>
+                  <option value="">プランを選択してください</option>
+                  <option value="1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                  <option value="2">②平日に優雅に楽しむ、特別宿泊プラン</option>
+                  <option value="3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                </select>
+              </div>
+              <div class="form__control">
+                <label for="your-date" class="form__label">日時選択</label>
+                <input type="text" class="form__input js-datepicker" name="your-date" id="your-date"
+                  placeholder="日時を選択してください" required>
+              </div>
+            </div>
+            <div class="form__submit">
+              <button type="submit" class="btn btn--primary" name="your-submit" id="your-submit">送信する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button type="button" id="js-modal-close" class="btn modal__close" aria-label="宿泊予約を閉じる"></button>
+    </div>
+  </section>
+
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- MyScript -->
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+@use '../global/' as global;
+
+
+.effect {
+  margin-bottom: 95px;
+}
+
+.effect__inner {
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  padding-top: 90px;
+  padding-bottom: 75px;
+
+  @include global.mq('sp') {
+    padding-top: 50px;
+  }
+}
+
+.effect__ttl {
+  font-size: 26px;
+  text-align: center;
+}
+
+.effect__body {
+  max-width: 880px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.effect__list {
+  border-top: 1px solid #E7E7E7;
+  margin-top: 45px;
+}
+
+.effect__row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E7E7E7;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  @include global.mq('tab') {
+    display: block;
+  }
+}
+
+.effect__t {
+  font-size: 15px;
+  flex: 1 1 100px;
+  padding-left: 3px;
+}
+
+.effect__d {
+  font-size: 15px;
+  flex: 0 0 660px;
+
+  @include global.mq('tab') {
+    padding-left: calc(1em + 3px);
+  }
+}

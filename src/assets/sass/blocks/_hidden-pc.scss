@@ -1,0 +1,8 @@
+@use '../global/' as global;
+
+
+.hidden-pc {
+  @include global.mq('pc') {
+    display: none;
+  }
+}

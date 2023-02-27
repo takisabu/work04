@@ -1,0 +1,36 @@
+@use '../global/' as global;
+
+
+.breadcrumb {
+  margin-top: 31px;
+}
+
+.breadcrumb__inner {
+
+}
+
+.breadcrumb__list {
+  display: flex;
+}
+
+.breadcrumb__item {
+  font-size: 16px;
+
+  &:not(:first-child) {
+    &::before {
+      content: ">";
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+  }
+
+  a {
+    transition: opacity .3s ease;
+
+    @include global.mq('pc') {
+      &:hover, &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '../global/' as global;
+
+
+.media-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -20px;
+
+  @include global.mq('tab') {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.media-list__item {
+  width: calc(570 / 1180 * 100%);
+  margin-bottom: 20px;
+
+  @include global.mq('tab') {
+    width: 100%;
+    max-width: 570px;
+  }
+}

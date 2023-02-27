@@ -1,0 +1,16 @@
+@use '../global/' as global;
+
+
+.container {
+  max-width: calc(global.$layout-width-container + global.$layout-padding-side-pc * 2);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: global.$layout-padding-side-pc;
+  padding-left: global.$layout-padding-side-pc;
+
+  @include global.mq('sp') {
+    padding-right: global.$layout-padding-side-sp;
+    padding-left: global.$layout-padding-side-sp;
+  }
+}

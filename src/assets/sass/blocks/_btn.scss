@@ -1,0 +1,97 @@
+@use '../global/' as global;
+
+
+.btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+
+  &.btn--lg {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &.btn--round {
+    border-radius: 50px;
+  }
+}
+
+.btn--primary {
+  background-color: transparent;
+  border: 1px solid #707070;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  transition: background-color .3s ease, color .3s ease;
+
+  @include global.mq('pc') {
+    &:hover, &:focus {
+      background-color: #707070;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.btn--reservation {
+  background-color: #978F10;
+  color: #FFFFFF;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  opacity: 1;
+  transition: opacity .3s ease;
+
+  &.btn--lg {
+    font-size: 16px;
+  }
+
+  @include global.mq('pc') {
+    &:hover, &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  @include global.mq('sp') {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+  }
+
+  .btn__inner {
+    position: relative;
+    padding-left: 32px;
+
+    @include global.mq('sp') {
+      padding-left: 24px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 22px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url("../img/calender.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include global.mq('sp') {
+        width: 16px;
+        height: 16px;
+
+        &.btn--lg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}

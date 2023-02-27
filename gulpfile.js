@@ -70,7 +70,7 @@ function browserReload(done) {
 // --- ファイル種別ごとの処理 -----
 // HTML
 function copyHtml() {
-  return gulp.src('./src/**/*.html')
+  return gulp.src(['./src/**/*.html', '!./src/**/_*.html'])
   .pipe(plumber({
     errorHandler: notify.onError('Error: <%= error.message %>'),
   }))

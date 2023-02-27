@@ -1,0 +1,78 @@
+@use '../global/' as global;
+
+
+.drawer {
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: global.get-layer-index('drawer');
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  background-image: url("../img/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: visibility .3s ease, opacity .3s ease;
+
+  .is-drawer-active & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.drawer__content {
+  position: absolute;
+  max-width: 300px;
+  width: 90%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.drawer__ttl {
+  font-size: 28px;
+  text-align: center;
+}
+
+.drawer__nav {
+  margin-top: 3vh;
+}
+
+.drawer__nav-item {
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+
+  &.drawer__nav-item--room {
+    background-image: url("../img/oheya-header.jpg");
+  }
+
+  &.drawer__nav-item--dining {
+    background-image: url("../img/menu-header.jpg");
+  }
+
+  &.drawer__nav-item--hotspring {
+    background-image: url("../img/onsen-header.jpg");
+  }
+
+  & + & {
+    margin-top: 1vh;
+  }
+}
+
+.drawer__nav-link {
+  display: block;
+  color: #FFFFFF;
+  font-size: 24px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.drawer__nav-btn {
+  margin-top: 3vh;
+}
